@@ -1,4 +1,5 @@
 
+                   
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Hitung Gaji</h1>
 </div>
@@ -6,6 +7,7 @@
         <div class="card-body">
             <div class="row mb-4">
                    <form action="store.php" method="post">
+                       <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             </div>
             <div class="col-8">
                 <div class="card-body">
@@ -70,4 +72,5 @@ function hitungGaji() {
     document.getElementById('total_gaji').value = `Rp${totalGaji.toFixed(2)}`;
 }
 </script>
+
 
